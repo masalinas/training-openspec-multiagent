@@ -5,11 +5,11 @@ A multi-agent orchestrated development workflow that uses [Antigravity](https://
 
 | Agent | Mode | Role |
 |---|---|---|
-| [@architect](<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/.agents/agents/architect.md) | primary | Drives the full delivery loop: clarifies requirements, creates OpenSpec specifications, delegates implementation, and evaluates review output. Never writes code itself. |
-| [@developer-backend](<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/.agents/agents/developer-backend.md) | subagent | Implements the backend spec assigned by `@architect` using the `openspec-apply-change` skill. Runs all checks before reporting completion. |
-| [@developer-frontend](<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/.agents/agents/developer-frontend.md) | subagent | Implements the frontend spec assigned by `@architect` using the `openspec-apply-change` skill. Runs all checks before reporting completion. |
-| [@code-reviewer](<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/.agents/agents/code-reviewer.md) | subagent | Reviews every change against the OpenSpec change definition. Issues actionable change requests or approves; cannot modify code itself. |
-| [@repo-scout](<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/.agents/agents/repo-scout.md) | subagent | Scans the repository and maintains `ARCHITECTURE.md` with detected stack, conventions, linting/test commands, and structural hotspots. |
+| [@architect](<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/scheduler/.agents/agents/architect.md) | primary | Drives the full delivery loop: clarifies requirements, creates OpenSpec specifications, delegates implementation, and evaluates review output. Never writes code itself. |
+| [@developer-backend](<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/scheduler/.agents/agents/developer-backend.md) | subagent | Implements the backend spec assigned by `@architect` using the `openspec-apply-change` skill. Runs all checks before reporting completion. |
+| [@developer-frontend](<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/scheduler/.agents/agents/developer-frontend.md) | subagent | Implements the frontend spec assigned by `@architect` using the `openspec-apply-change` skill. Runs all checks before reporting completion. |
+| [@code-reviewer](<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/scheduler//.agents/agents/code-reviewer.md) | subagent | Reviews every change against the OpenSpec change definition. Issues actionable change requests or approves; cannot modify code itself. |
+| [@repo-scout](<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/scheduler//.agents/agents/repo-scout.md) | subagent | Scans the repository and maintains `ARCHITECTURE.md` with detected stack, conventions, linting/test commands, and structural hotspots. |
 
 ## Workflow
 
@@ -56,12 +56,12 @@ Copy the agent definitions to the Project agents directory and restart Antigravi
 
 **macOS / Linux**
 ```bash
-cp opencode/agents/* <YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/.agents/agents/
+cp opencode/agents/* <YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>/scheduler/.agents/agents/
 ```
 
 **Windows**
 ```powershell
-Copy-Item opencode\agents\* "<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>\.agents\agents\"
+Copy-Item opencode\agents\* "<YOUR_SCHEDULER_PROJECT_WORKING_FOLDER>\scheduler\.agents\agents\"
 ```
 
 ### Start

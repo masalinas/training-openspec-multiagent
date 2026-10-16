@@ -1,7 +1,7 @@
 ---
 description: Scans a repository and reports stack, conventions, and commands.
 mode: subagent
-model: openai/gpt-5.3-codex
+model: gemini/gemini-1.5-flash
 temperature: 0.1
 tools:
   write: true

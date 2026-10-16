@@ -1,7 +1,7 @@
 ---
 description: Architects whole implementations.
 mode: primary
-model: openai/gpt-5.4
+model: gemini/gemini-1.5-flash
 temperature: 0.1
 tools:
   write: true

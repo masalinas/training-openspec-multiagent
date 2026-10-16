@@ -1,2 +1,2 @@
 # Description
-Scheduler agent working folder.
+Agents configuration and coordination working folder.
